@@ -2,7 +2,7 @@
 Install python 3!
 And install pip for it, in case it's not bundled for your OS
 
-# run
+# initialize
 
 ``` py
 # install packages
@@ -13,3 +13,7 @@ python loadAndTestModel.py
 ```
 
 on windows use `py -m pip` instead of `pip`
+
+
+# run
+more information soon
