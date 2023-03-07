@@ -16,4 +16,21 @@ on windows use `py -m pip` instead of `pip`
 
 
 # run
-more information soon
+```
+usage: tts.py [-h] -in <inputFile> -out <outputFile.wav> -v <voicename>
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+REQUIRED arguments:
+  -in <inputFile>, --input <inputFile>
+                        Text file to convert
+  -out <outputFile.wav>, --output <outputFile.wav>
+                        Output file name to write the sound to
+  -v <voicename>, --voice <voicename>
+                        name of the voice to be used
+
+VoiceName
+any of voices supported by Silero
+
+```
