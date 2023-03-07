@@ -31,6 +31,13 @@ REQUIRED arguments:
                         name of the voice to be used
 
 VoiceName
-any of voices supported by Silero
+Any of voices supported by Silero.
+At the time of writing that were:
+  -  aidar
+  -  baya
+  -  kseniya
+  -  xenia
+  -  eugene
+  -  random
 
 ```

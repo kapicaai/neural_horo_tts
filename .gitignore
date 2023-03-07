@@ -3,6 +3,8 @@
 *.wav
 *.zip
 
+*test.txt
+
 # Logs
 logs
 *.log
