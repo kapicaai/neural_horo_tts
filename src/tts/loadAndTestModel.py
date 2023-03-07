@@ -13,10 +13,11 @@ if not os.path.isfile(local_file):
 model = torch.package.PackageImporter(local_file).load_pickle("tts_models", "model")
 model.to(device)
 
-example_text = 'Близнецы: Гороскоп советует вам заняться чем то интересным например изнасилованием мусорного бака. День идеален для посещения театра абсурда. Не забывайте следить за тэмпом вращения Земли. Не стесняйтесь орать: "Господа, это пиздец!!!"'
+example_text = 'Близнецы: Гороскоп советует вам заняться чем то интересным например изнасилованием мусорного бака. День идеален для посещения театра абсурда. Не забывайте следить за тэ+мпом вращения Земли. Не стесняйтесь орать: "Господа, это пиздец!!!"'
 sample_rate = 48000
 speaker='baya'
 
 audio_paths = model.save_wav(text=example_text,
                              speaker=speaker,
-                             sample_rate=sample_rate)
+                             sample_rate=sample_rate,
+                             audio_path="test.wav")

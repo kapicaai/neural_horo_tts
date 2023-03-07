@@ -1,6 +1,7 @@
 # Project-specific
 *.pt
 *.wav
+*.mp3
 *.zip
 
 *test.txt
