@@ -1,9 +1,4 @@
 import os
-import sys
-print('importing TORCH...')
-import torch
-print('imported TORCH!\n')
-
 import argparse
 
 argparser = argparse.ArgumentParser(
@@ -31,6 +26,10 @@ requiredArgs.add_argument('-v', '--voice',
 
 args = argparser.parse_args()
 
+
+print('importing TORCH...')
+import torch
+print('imported TORCH!\n')
 
 model_file = 'model.pt'
 if not os.path.isfile(model_file):
