@@ -5,20 +5,19 @@ import argparse
 argparser = argparse.ArgumentParser(
     prog = 'tts.py',
     description = "Convert text file(s) into audio files using Silero's Model!",
-    epilog = 'Enjoy!'
+    epilog = 'Available voices: aidar, baya, kseniya, xenia, eugene.\nEnjoy!'
 )
 
 requiredArgs = argparser.add_argument_group('REQUIRED arguments')
 
 requiredArgs.add_argument('-o', '--output',
-                        metavar='<outputFile.wav>', type=str,
+                        metavar='<outputFile[.wav]>', type=str,
                         help='Output file name to write the sound to, otherwise will read stdin firstly',
                         required=True)
 requiredArgs.add_argument('-v', '--voice',
                         metavar='<voicename>', type=str,
                         help='name of the voice to be used',
                         required=True)
-
 
 argparser.add_argument('-i', '--input',
                         metavar='<inputFile>', type=str,
@@ -83,6 +82,8 @@ def convertToMp3UsingFfmpeg(input, output):
         print(err)
         return False
     else:
+        os.remove(input)
+        print('deleted the wav version')
         return True
 
 textToConvert = ""
